@@ -25,8 +25,8 @@ def move(board, index, current_player = "X")
   board[index] = current_player
 end
 
-def position_taken?(board, location)
-  board[location] != " " && board[location] != ""
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
 end
 
 def valid_move?(board, index)
@@ -49,17 +49,18 @@ def turn_count(board)
   board.count{|token| token == "X" || token == "O"}
 end
 
-
-# Helper Method
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
-end
-
-
-
 def current_player(board)
   turn_count(board) % 2 == 0 ? "X" : "O"
 end
+
+
+
+
+
+
+
+
+
 # Define your WIN_COMBINATIONS constant
 
 
