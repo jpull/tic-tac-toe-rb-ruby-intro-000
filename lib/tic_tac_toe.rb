@@ -3,6 +3,13 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+def turn_count(board)
+  board.count{|token| token == "X" || token == "O"}
+end
+
+def current_player(board)
+  turn_count(board) % 2 == 0 ? "X" : "O"
+end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # Top row
