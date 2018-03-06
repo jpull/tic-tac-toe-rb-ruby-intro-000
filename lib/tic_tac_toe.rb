@@ -83,8 +83,13 @@ end
 
 def play(board)
   round = 0
-  while round < 9
+  while !over?(board)
     turn(board)
     round += 1
+  end
+  if draw?(board)
+    puts "DRAW!"
+  elsif won?(board)
+    puts "WINNER! #{winner(board)}"
   end
 end
