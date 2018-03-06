@@ -37,9 +37,9 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  puts "Count: #{turn_count(board)}"
+  puts "Count: #{current_player(board)} #{turn_count(board)}"
   if valid_move?(board, index)
-    move(board, index,turn_count(board))
+    move(board, index,current_player(board))
     display_board(board)
   else
     puts "Invalid Move"
