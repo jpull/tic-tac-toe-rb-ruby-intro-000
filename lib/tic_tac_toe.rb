@@ -53,7 +53,7 @@ def turn(board)
     move(board, index,current_player(board))
     display_board(board)
   else
-    puts "Invalid Move"
+    #puts "Invalid Move"
     turn(board)
   end
 end
