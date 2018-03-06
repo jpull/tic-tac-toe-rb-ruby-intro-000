@@ -84,5 +84,3 @@ def play(board)
     round += 1
   end
 end
-
-play
