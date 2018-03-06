@@ -88,7 +88,7 @@ def play(board)
     round += 1
   end
   if draw?(board)
-    puts "DRAW!"
+    puts "Cat's Game!"
   elsif won?(board)
     puts "WINNER! #{winner(board)}"
   end
